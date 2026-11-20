@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "p8regimes"
+version = "1.2.1"
+description = "When bonds stop hedging equities: real-time stock-bond regimes from sign-identified market shocks, versus the 60/40"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Édouard Coulibaly" }]
+license = { text = "MIT" }
+dependencies = [
+    "numpy>=1.26",
+    "pandas>=2.1",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+data = ["yfinance>=0.2.40"]
+dev = ["pytest>=8", "ipykernel>=6.29", "nbformat>=5.9", "nbconvert>=7.16"]
+
+[project.scripts]
+p8 = "p8regimes.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

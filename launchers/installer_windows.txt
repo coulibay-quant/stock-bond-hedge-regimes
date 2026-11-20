@@ -1,0 +1,18 @@
+@echo off
+REM ---------------------------------------------------------------------------
+REM P8 - installation sous Windows
+REM Renommer ce fichier en installer.bat, puis double-cliquer dessus.
+REM Cree l'environnement .venv, installe le package et lance les tests.
+REM ---------------------------------------------------------------------------
+cd /d "%~dp0\.."
+py -3.13 -m venv .venv
+if errorlevel 1 python -m venv .venv
+call .venv\Scripts\activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev,data]"
+python -m ipykernel install --user --name p8regimes --display-name "Python (p8regimes)"
+python -m pytest -q
+echo.
+echo Installation terminee. Ouvrir le dossier dans VS Code, puis notebooks\02_seance_de_travail.ipynb
+echo et choisir le noyau .venv (ou "Python (p8regimes)").
+pause

@@ -1,0 +1,8 @@
+@echo off
+REM Renommer en telecharger.bat : telecharge toutes les donnees publiques (Etats-Unis et zone euro).
+REM Equivalent a TELECHARGER = True dans le notebook 02.
+cd /d "%~dp0\.."
+call .venv\Scripts\activate
+p8 fetch --market all
+p8 status
+pause

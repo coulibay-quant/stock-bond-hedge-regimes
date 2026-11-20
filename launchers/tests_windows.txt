@@ -1,0 +1,6 @@
+@echo off
+REM Renommer en tests.bat : lance les tests unitaires (environ 10 secondes).
+cd /d "%~dp0\.."
+call .venv\Scripts\activate
+python -m pytest -q
+pause

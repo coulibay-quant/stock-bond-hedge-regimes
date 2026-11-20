@@ -1,0 +1,23 @@
+Fichiers manuels (facultatif)
+=============================
+
+Si un telechargement automatique echoue, deposer ici le fichier telecharge a la main, avec le nom
+indique : il remplace alors le telechargement. Relancer ensuite le notebook avec TELECHARGER = True.
+
+Etats-Unis
+  feds200628.csv                         https://www.federalreserve.gov/data/yield-curve-tables/feds200628.csv
+  F-F_Research_Data_Factors_daily.csv    (ou le .zip) https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+  CPIAUCSL.csv                           https://fred.stlouisfed.org/series/CPIAUCSL (bouton Download, CSV)
+  ief.csv                                colonnes Date et Close AJUSTE des dividendes (Yahoo Finance, IEF, "Adj Close")
+
+Zone euro
+  bbk_R01XX.csv, bbk_R02XX.csv, bbk_R05XX.csv, bbk_R06XX.csv, bbk_R07XX.csv, bbk_R08XX.csv, bbk_R10XX.csv
+      Bundesbank, base de series temporelles, serie BBSIS.D.I.ZST.ZI.EUR.S1311.B.A604.R10XX.R.A.A._Z._Z.A
+      (remplacer R10XX par la maturite), export CSV
+  dax.csv          colonnes Date et Close (Yahoo Finance ^GDAXI ou Stooq ^dax)
+  eonia.csv        BCE, serie EON.D.EONIA_TO.RATE (ou FM.D.U2.EUR.4F.MM.EONIA.HSTA), 1999 -> 2022
+  estr.csv         BCE, serie EST.B.EU000A2X2A25.WT
+  hicp.csv         BCE : ICP.M.U2.N.000000.4.ANR jusqu'en 12/2025, puis HICP.M.U2.N.000000.4D0.ANR
+                   (le jeu de donnees ICP a ete remplace par HICP le 4 fevrier 2026)
+
+Les lecteurs sont tolerants : une colonne de dates et une colonne de valeurs suffisent.
