@@ -1,4 +1,6 @@
-# p8-regimes — When bonds stop hedging equities
+# stock-bond-hedge-regimes — When bonds stop hedging equities
+
+*The project is called P8 in the code: Python package `p8regimes`, command-line tool `p8`.*
 
 Real-time stock-bond regimes from sign-identified market shocks, and a regime-aware de-risking
 rule evaluated against the 60/40 portfolio and a volatility target.
